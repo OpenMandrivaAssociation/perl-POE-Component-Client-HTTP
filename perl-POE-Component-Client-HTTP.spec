@@ -11,7 +11,6 @@ Group:      Development/Perl
 Summary:    non-blocking/parallel web requests engine
 Source:     http://www.cpan.org/modules/by-module/POE/%{realname}-%{version}.tar.gz
 Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: perl-devel
 BuildRequires: perl(HTTP::Request)
 BuildRequires: perl(HTTP::Response)
