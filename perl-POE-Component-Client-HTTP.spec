@@ -1,6 +1,6 @@
 
 %define realname   POE-Component-Client-HTTP
-%define version    0.83
+%define version    0.84
 %define release    %mkrel 1
 
 Name:       perl-%{realname}
