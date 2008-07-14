@@ -1,6 +1,6 @@
 %define module   POE-Component-Client-HTTP
-%define version    0.84
-%define release    %mkrel 2
+%define version    0.85
+%define release    %mkrel 1
 
 Name:       perl-%{module}
 Version:    %{version}
