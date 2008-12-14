@@ -1,6 +1,6 @@
-%define module   POE-Component-Client-HTTP
-%define version    0.87
-%define release    %mkrel 1
+%define module  POE-Component-Client-HTTP
+%define version 0.87
+%define release %mkrel 1
 
 Name:       perl-%{module}
 Version:    %{version}
@@ -10,12 +10,12 @@ Group:      Development/Perl
 Summary:    non-blocking/parallel web requests engine
 Url:        http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/POE/%{module}-%{version}.tar.gz
-BuildRequires: perl-devel
 BuildRequires: perl(HTTP::Request)
 BuildRequires: perl(HTTP::Response)
 BuildRequires: perl(Net::HTTP::Methods)
 BuildRequires: perl(POE)
 BuildRequires: perl(POE::Component::Client::Keepalive)
+BuildRequires: perl(Test::POE::Server::TCP)
 BuildRequires: perl(URI)
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
@@ -47,6 +47,3 @@ rm -rf %{buildroot}
 %doc CHANGES README
 %{_mandir}/man3/*
 %perl_vendorlib/POE
-
-
-
