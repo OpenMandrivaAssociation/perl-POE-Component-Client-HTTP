@@ -1,15 +1,16 @@
-%define module  POE-Component-Client-HTTP
-%define version 0.88
-%define release %mkrel 1
+%define upstream_name    POE-Component-Client-HTTP
+%define upstream_version 0.88
 
-Name:       perl-%{module}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    Non-blocking/parallel web requests engine
+License:    GPL+ or Artistic
 Group:      Development/Perl
-Summary:    non-blocking/parallel web requests engine
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/POE/%{module}-%{version}.tar.gz
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/POE/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(HTTP::Request)
 BuildRequires: perl(HTTP::Response)
 BuildRequires: perl(Net::HTTP::Methods)
@@ -18,7 +19,7 @@ BuildRequires: perl(POE::Component::Client::Keepalive)
 BuildRequires: perl(Test::POE::Server::TCP)
 BuildRequires: perl(URI)
 BuildArch: noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The HTTPHead filter turns stream data that has the appropriate format
@@ -26,7 +27,7 @@ into a HTTP::Response object. In an all-POE world, this would sit on
 the other end of a connection as POE::Filter::HTTPD/
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
