@@ -1,5 +1,5 @@
 %define upstream_name    POE-Component-Client-HTTP
-%define upstream_version 0.893
+%define upstream_version 0.894
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
