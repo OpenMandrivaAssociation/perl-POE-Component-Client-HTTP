@@ -1,5 +1,5 @@
 %define upstream_name    POE-Component-Client-HTTP
-%define upstream_version 0.947
+%define upstream_version 0.948
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:	Non-blocking/parallel web requests engine
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/POE/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/POE/POE-Component-Client-HTTP-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(HTTP::Request)
@@ -113,5 +113,6 @@ make test
 * Wed Nov 14 2007 Jérôme Quelin <jquelin@mandriva.org> 0.82-1mdv2008.1
 + Revision: 108703
 - import perl-POE-Component-Client-HTTP
+
 
 
