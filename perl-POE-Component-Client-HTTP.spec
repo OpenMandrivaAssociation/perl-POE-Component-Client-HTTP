@@ -1,15 +1,15 @@
 %define upstream_name    POE-Component-Client-HTTP
-%define upstream_version 0.948
+%define upstream_version 0.949
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Non-blocking/parallel web requests engine
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/POE/POE-Component-Client-HTTP-%{upstream_version}.tar.gz
+Url:		https://github.com/rcaputo/poe-component-client-http
+Source0:	https://cpan.metacpan.org/authors/id/R/RC/RCAPUTO/POE-Component-Client-HTTP-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
