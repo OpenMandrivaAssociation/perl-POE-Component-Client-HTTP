@@ -1,15 +1,13 @@
 %define upstream_name    POE-Component-Client-HTTP
-%define upstream_version 0.949
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.949
+Release:	2
 
 Summary:	Non-blocking/parallel web requests engine
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/rcaputo/poe-component-client-http
-Source0:	https://cpan.metacpan.org/authors/id/R/RC/RCAPUTO/POE-Component-Client-HTTP-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/R/RC/RCAPUTO/POE-Component-Client-HTTP-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -29,7 +27,7 @@ into a HTTP::Response object. In an all-POE world, this would sit on
 the other end of a connection as POE::Filter::HTTPD/
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -79,9 +77,7 @@ make test
 
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.880.0-1mdv2010.0
 + Revision: 404347
-- rebuild using %%perl_convert_version
-
-* Sun Feb 22 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.88-1mdv2009.1
+- rebuild using %0.949 Sun Feb 22 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.88-1mdv2009.1
 + Revision: 343836
 - update to new version 0.88
 
